@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kLZ-AA-vtA">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--DIT Map-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DITMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Xzz-vz-sNB">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Xzz-vz-sNB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="6Ws-zG-RoU"/>
+                            <constraint firstAttribute="trailing" secondItem="Xzz-vz-sNB" secondAttribute="trailing" id="8TZ-D5-E11"/>
+                            <constraint firstItem="Xzz-vz-sNB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="isL-F6-kpF"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Xzz-vz-sNB" secondAttribute="bottom" id="oln-eU-gAu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="DIT Map" id="FWp-Vk-o5Y"/>
+                    <connections>
+                        <outlet property="myMapView" destination="Xzz-vz-sNB" id="WlE-Zq-R8S"/>
+                        <segue destination="syQ-9Z-170" kind="push" identifier="GoDetail" id="apY-Vi-3AD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="980" y="-559"/>
+        </scene>
+        <!--우리학교전경-->
+        <scene sceneID="ZEP-T1-95G">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dIU-8p-Ugx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="syQ-9Z-170" customClass="DetailViewController" customModule="DITMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FTO-J5-P5l"/>
+                        <viewControllerLayoutGuide type="bottom" id="NPJ-6Q-MMd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hVp-dg-Nec">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bright-7.png" translatesAutoresizingMaskIntoConstraints="NO" id="qhH-fw-3K3">
+                                <rect key="frame" x="0.0" y="64" width="382" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="우리학교전경" id="s8G-T8-vAs"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1701.5999999999999" y="-559.07046476761627"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uQD-lY-zvY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kLZ-AA-vtA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SnL-DX-2b9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="g60-DX-F9c"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vGh-ai-S8v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="120.8" y="-559.07046476761627"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bright-7.png" width="29" height="30"/>
+    </resources>
+</document>
